@@ -16,24 +16,61 @@ body, html {
 
 header {
   border: 3px solid purple;
-  background: #2B2B2B;
+  /* background: #2B2B2B; */
+  background: white;
+}
+
+.sign-in {
+  /* width: 100% */
+  border: 3px solid red;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1em;
 }
 
 nav {
   border: 3px solid orange;
+  /* display: flex;
+  flex-direction: row; */
 }
 
-p {
-  border: 3px solid red;
-}
 
 ul {
+  width: 70%;
+  border: 3px solid green;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-around;
+}
+
+.img-logo {
+  height: 20%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1em;
   border: 3px solid green;
 }
 
-h2 {
-  border: 3px solid pink;
+.logo {
+  height: 4em;
+  width: 4em;
+  border: 3px solid green;
+
 }
+
+.logo-title {
+  display: flex;
+  justify-content: flex-end;
+  /* padding-right: 2em; */
+  padding-top: 0;
+  border: 3px solid green;
+  font-family: 'Seaweed Script', cursive;
+}
+
+/* h2 {
+  border: 3px solid pink;
+} */
 
 main {
   height: 75%;
