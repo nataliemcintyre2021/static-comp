@@ -1,0 +1,42 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  margin: 4px;
+  padding: 0px;
+  /* border: 2px solid blue */
+ }
+
+body, html {
+  height: 100%;
+  width: 100%;
+  /* background: #A4DBCE; */
+  border: 2px solid black;
+}
+
+header {
+  border: 3px solid purple;
+  background: #2B2B2B;
+}
+
+nav {
+  border: 3px solid orange;
+}
+
+p {
+  border: 3px solid red;
+}
+
+ul {
+  border: 3px solid green;
+}
+
+h2 {
+  border: 3px solid pink;
+}
+
+main {
+  height: 75%;
+  width: 100%;
+  background: #A4DBCE;
+}
