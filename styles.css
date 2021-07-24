@@ -1,47 +1,101 @@
 *,
 *:after,
 *:before {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   margin: 4px;
-  padding: 0px;
+  padding: .5px;
+  /* background-color: #9bdde8 */
   /* border: 2px solid blue */
  }
 
 body, html {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   /* background: #A4DBCE; */
-  border: 2px solid black;
+  /* border: 2px solid black; */
+  font-family: 'STIX Two Math', serif;
 }
 
 header {
-  border: 3px solid purple;
+  /* border: 3px solid purple; */
   /* background: #2B2B2B; */
-  background: white;
+  background: #f9bc97;
+  height: 24vh;
+}
+.sign {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: .7em;
+}
+.sign-in-icon {
+  height: 2.5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
+.drop-down {
+  height: 3vh;
+  padding-left: 0;
+}
 .sign-in {
+  /* background: #9bdde8; */
+}
+/* .sign-in {
   /* width: 100% */
-  border: 3px solid red;
-  display: flex;
+  /* border: 3px solid red; */
+  /* display: flex;
   justify-content: flex-end;
   padding-right: 1em;
-}
-
+  padding-top: 1em;
+  font-size: .8em;
+}  */
+/*
 nav {
   border: 3px solid orange;
   /* display: flex;
   flex-direction: row; */
+/* } */
+
+.navigation {
+  /* background: white */
+}
+.style-line {
+  /* border: 2px solid red; */
+  /* position: absolute; */
+  height: 1.5vh;
+  border: 1px solid transparent;
+  background: #f1e191;
+  padding: 0;
 }
 
-
 ul {
-  width: 70%;
-  border: 3px solid green;
+  width: 50%;
+  /* border: 3px solid green; */
   display: flex;
   flex-direction: row;
   list-style-type: none;
   justify-content: space-around;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: .8em;
+}
+
+.share {
+  height: 2vh;
+}
+.menu {
+  height: 2vh;
+}
+.user {
+  height: 2vh;
 }
 
 .img-logo {
@@ -49,13 +103,15 @@ ul {
   display: flex;
   justify-content: flex-end;
   padding-right: 1em;
-  border: 3px solid green;
+  /* border: 3px solid green; */
 }
 
 .logo {
-  height: 4em;
-  width: 4em;
-  border: 3px solid green;
+  height: 3em;
+  width: 3em;
+  padding-bottom: .25em;
+  padding-left: .3em;
+  /* border: 3px solid green; */
 
 }
 
@@ -64,16 +120,162 @@ ul {
   justify-content: flex-end;
   /* padding-right: 2em; */
   padding-top: 0;
-  border: 3px solid green;
+  /* border: 3px solid green; */
   font-family: 'Seaweed Script', cursive;
+  font-size: 1em;
 }
 
 /* h2 {
   border: 3px solid pink;
 } */
 
+
 main {
-  height: 75%;
-  width: 100%;
-  background: #A4DBCE;
+  /* height: 100vh;
+  width: 100vw; */
+  background: #9bdde8;
+
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: .8fr .8fr;
+  grid-template-rows: 2fr 2fr 2fr 2fr;
+  grid-gap: .3rem;
+  grid-template-areas:
+    "content1 content2"
+    "content3 content4"
+    "content5 content6"
+    "content7 content8"
+}
+
+.content1 {
+  background: white;
+  grid-area: content1;
+  position: relative;
+}
+
+.content2 {
+  background: white;
+  grid-area: content2;
+  position: relative;
+}
+
+.content3 {
+  background: white;
+  grid-area: content3;
+  position: relative;
+}
+
+.content4 {
+  background: white;
+  grid-area: content4;
+  position: relative;
+}
+
+.content5 {
+  background: white;
+  grid-area: content5;
+  position: relative;
+}
+
+.content6 {
+  background: white;
+  grid-area: content6;
+  position: relative;
+}
+
+.content7 {
+  background: white;
+  grid-area: content7;
+  position: relative;
+}
+
+.content8 {
+  background: white;
+  grid-area: content8;
+  position: relative;
+}
+
+.beach1,
+.beach2,
+.beach3,
+.beach4,
+.beach5,
+.beach6,
+.beach7,
+.beach8 {
+  /* height: 15vh;
+  width: 42vw; */
+  height: 65%;
+  width: 95%;
+}
+.arrow {
+  position: absolute;
+  /* top: 92px;
+  left: 130px; */
+  top: 80%;
+  left: 80%;
+  height: 15%;
+  width: 16%;
+
+}
+
+
+@media only screen and (min-width: 500px) {
+  .container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: .8fr .8fr .8fr .8fr;
+    grid-template-rows: 2fr 2fr;
+    grid-gap: .3rem;
+    grid-template-areas:
+      "content1 content2 content3 content4"
+      "content5 content6 content7 content8"
+  }
+
+  .logo {
+    height: 4em;
+    width: 4em;
+    /* border: 3px solid green; */
+    padding-right: 1em;
+    padding-bottom: .5em;
+    margin-right: 1.75em;
+
+  }
+
+  .logo-title {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-right: 1em;
+    padding-top: 0;
+    /* border: 3px solid green; */
+    font-family: 'Seaweed Script', cursive;
+    font-size: 1.5em;
+
+  }
+  .beach-title {
+    margin-bottom: 3vh;
+    /* border: 2px solid black; */
+  }
+
+  ul {
+    width: 40%;
+    /* border: 3px solid green; */
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-around;
+  }
+
+  li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1em;
+  }
+
 }
