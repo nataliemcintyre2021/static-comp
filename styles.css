@@ -15,7 +15,7 @@ body, html {
   /* border: 2px solid black; */
   font-family: 'STIX Two Math', serif;
 }
-
+/* header nav-bar  */
 header {
   /* border: 3px solid purple; */
   /* background: #2B2B2B; */
@@ -40,9 +40,9 @@ header {
   height: 3vh;
   padding-left: 0;
 }
-.sign-in {
+/* .sign-in {
   /* background: #9bdde8; */
-}
+/* } */
 /* .sign-in {
   /* width: 100% */
   /* border: 3px solid red; */
@@ -59,9 +59,9 @@ nav {
   flex-direction: row; */
 /* } */
 
-.navigation {
+/* .navigation {
   /* background: white */
-}
+/* } */
 .style-line {
   /* border: 2px solid red; */
   /* position: absolute; */
@@ -118,8 +118,10 @@ li {
 .logo-title {
   display: flex;
   justify-content: flex-end;
+  align-items: flex-start;
   /* padding-right: 2em; */
   padding-top: 0;
+  padding-bottom: 3em;
   /* border: 3px solid green; */
   font-family: 'Seaweed Script', cursive;
   font-size: 1em;
@@ -129,20 +131,26 @@ li {
   border: 3px solid pink;
 } */
 
+/* main page */
 
 main {
   /* height: 100vh;
   width: 100vw; */
   background: #9bdde8;
-
 }
 
 .container {
   display: grid;
-  height: 100vh;
+  /* height: 100vh; */
+  min-width: 0;
+  min-height: 0;
   grid-template-columns: .8fr .8fr;
+  grid-template-columns: autofit;
   grid-template-rows: 2fr 2fr 2fr 2fr;
+  grid-template-rows: autofit;
   grid-gap: .3rem;
+  grid-template-areas: autofit;
+  position: relative;
   grid-template-areas:
     "content1 content2"
     "content3 content4"
@@ -154,6 +162,9 @@ main {
   background: white;
   grid-area: content1;
   position: relative;
+  min-width: 0;
+  min-height: 0;
+  /* object-fit: fill; */
 }
 
 .content2 {
@@ -208,8 +219,9 @@ main {
 .beach8 {
   /* height: 15vh;
   width: 42vw; */
-  height: 65%;
+  height: 75%;
   width: 95%;
+  object-fit: contain;
 }
 .arrow {
   position: absolute;
@@ -219,9 +231,19 @@ main {
   left: 80%;
   height: 15%;
   width: 16%;
+  object-fit: contain;
 
 }
+.favorite {
+  position: absolute;
+  top: 49%;
+  left: 75%;
+  height: 30%;
+  width: 18%;
+  object-fit: contain;
+}
 
+/* desktop view */
 
 @media only screen and (min-width: 500px) {
   .container {
