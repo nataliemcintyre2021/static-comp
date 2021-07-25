@@ -71,6 +71,10 @@ nav {
   padding: 0;
 }
 
+/* nav {
+  border: 2px solid green;
+  width: 50%;
+} */
 ul {
   width: 50%;
   /* border: 3px solid green; */
@@ -78,6 +82,7 @@ ul {
   flex-direction: row;
   list-style-type: none;
   justify-content: space-around;
+  /* border: 2px solid purple; */
 }
 
 li {
@@ -137,20 +142,35 @@ main {
   /* height: 100vh;
   width: 100vw; */
   background: #9bdde8;
+  /* border: 2px solid blue; */
+}
+
+
+.header {
+  font-family: 'Seaweed Script', cursive;
+  /* border: 2px solid black; */
+  /* width: 95%;
+  margin-right: 10px; */
 }
 
 .container {
+  /* background-color: #9bdde8; */
   display: grid;
   /* height: 100vh; */
-  min-width: 0;
-  min-height: 0;
-  grid-template-columns: .8fr .8fr;
-  grid-template-columns: autofit;
+  /* min-width: 0;
+  min-height: 0; */
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: repeat(minmax(.8fr)); */
+  /* grid-template-columns: autofit; */
   grid-template-rows: 2fr 2fr 2fr 2fr;
-  grid-template-rows: autofit;
-  grid-gap: .3rem;
-  grid-template-areas: autofit;
+  /* grid-template-rows: repeat(minmax(2fr)); */
+  /* grid-template-rows: autofit; */
+  /* grid-gap: .3rem; */
+  /* grid-template-areas: autofit; */
+  /* grid-template-columns: minmax(10px);
+  grid-template-rows: minmax(10px); */
   position: relative;
+  overflow: hidden;
   grid-template-areas:
     "content1 content2"
     "content3 content4"
@@ -160,11 +180,46 @@ main {
 
 .content1 {
   background: white;
+  border-radius: 2px;
   grid-area: content1;
   position: relative;
   min-width: 0;
   min-height: 0;
-  /* object-fit: fill; */
+  object-fit: fill;
+}
+
+.text-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'STIX Two Math', serif;
+  /* border: 2px solid black; */
+  margin: 0;
+  padding: 0;
+
+}
+.main-text {
+  font-size: .8em;
+  font-family: 'STIX Two Math', serif;
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  /* position: absolute; */
+}
+
+.details {
+  font-size: 2%;
+  font-family: 'STIX Two Math', serif;
+  margin-bottom: 0;
+  padding-top: 0;
+  /* position: absolute; */
+}
+
+.book {
+  font-family: 'STIX Two Math', serif;
+
+  /* position: absolute; */
 }
 
 .content2 {
@@ -219,9 +274,10 @@ main {
 .beach8 {
   /* height: 15vh;
   width: 42vw; */
-  height: 75%;
+  height: 65%;
   width: 95%;
-  object-fit: contain;
+  object-fit: cover;
+  position: relative;
 }
 .arrow {
   position: absolute;
@@ -236,16 +292,16 @@ main {
 }
 .favorite {
   position: absolute;
-  top: 49%;
-  left: 75%;
-  height: 30%;
-  width: 18%;
+  top: 50%;
+  left: 80%;
+  height: 6vh;
+  width: 6vw;
   object-fit: contain;
 }
 
 /* desktop view */
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 1025px) {
   .container {
     display: grid;
     height: 100vh;
