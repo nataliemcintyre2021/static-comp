@@ -124,6 +124,9 @@ main {
 }
 
 .container {
+  margin: 1em;
+  padding: 0;
+  grid-gap: .5em;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 2fr 2fr 2fr 2fr;
@@ -144,6 +147,8 @@ main {
   min-width: 0;
   min-height: 0;
   object-fit: fill;
+  margin: 0;
+  padding: 0;
 }
 
 .text-area {
@@ -179,42 +184,56 @@ main {
   background: white;
   grid-area: content2;
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 .content3 {
   background: white;
   grid-area: content3;
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 .content4 {
   background: white;
   grid-area: content4;
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 .content5 {
   background: white;
   grid-area: content5;
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 .content6 {
   background: white;
   grid-area: content6;
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 .content7 {
   background: white;
   grid-area: content7;
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 .content8 {
   background: white;
   grid-area: content8;
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 .beach1,
@@ -226,7 +245,9 @@ main {
 .beach7,
 .beach8 {
   height: 65%;
-  width: 95%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   object-fit: cover;
   position: relative;
 }
